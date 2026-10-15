@@ -1,0 +1,11 @@
+.env*
+!.env.example
+storage/*
+!storage/.gitkeep
+!storage/.htaccess
+analysis/
+*.zip
+build/
+__pycache__/
+*.pyc
+*.log

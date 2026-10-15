@@ -1,0 +1,16 @@
+<?php
+require dirname(__DIR__,2).'/app/admin.php';require_admin();
+if($_SERVER['REQUEST_METHOD']==='POST'){
+ check_csrf();$id=(int)($_POST['id']??0);$status=is_string($_POST['status']??null)?$_POST['status']:'';
+ if(!in_array($status,['published','draft','archived'],true)){http_response_code(422);exit('Estado inválido.');}
+ $q=db()->prepare('UPDATE courses SET status=?,updated_at=? WHERE id=?');$q->execute([$status,date(DATE_ATOM),$id]);redirect('admin/index.php?updated=1');
+}
+$search=trim(is_string($_GET['q']??null)?$_GET['q']:'');$state=is_string($_GET['status']??null)?$_GET['status']:'';$where=[];$params=[];
+if($search!==''){$where[]='(title LIKE ? OR technology LIKE ?)';$params[]='%'.$search.'%';$params[]='%'.$search.'%';}
+if(in_array($state,['published','draft','archived'],true)){$where[]='status=?';$params[]=$state;}
+$q=db()->prepare('SELECT * FROM courses'.($where?' WHERE '.implode(' AND ',$where):'').' ORDER BY updated_at DESC,id DESC');$q->execute($params);$items=$q->fetchAll();
+$stats=db()->query('SELECT status,COUNT(*) AS n FROM courses GROUP BY status')->fetchAll(PDO::FETCH_KEY_PAIR);
+admin_header('Tus programas'); ?>
+<div class="admin-stats"><div><strong><?=array_sum($stats)?></strong><span>Propuestas registradas</span></div><div><strong><?=$stats['published']??0?></strong><span>Publicadas</span></div><div><strong><?=$stats['draft']??0?></strong><span>Borradores</span></div><div><strong><?=$stats['archived']??0?></strong><span>Archivadas</span></div></div>
+<?php if(isset($_GET['updated'])):?><div class="success-message" role="status">Los cambios se guardaron correctamente.</div><?php endif;?><div class="admin-toolbar"><form method="get"><input name="q" value="<?=e($search)?>" placeholder="Buscar programas" aria-label="Buscar programas"><select name="status" aria-label="Estado"><option value="">Todos los estados</option><?php foreach(['published'=>'Publicados','draft'=>'Borradores','archived'=>'Archivados'] as $key=>$label):?><option value="<?=$key?>" <?=$state===$key?'selected':''?>><?=$label?></option><?php endforeach;?></select><button class="button small" type="submit">Filtrar</button></form><a class="button" href="<?=url('admin/edit.php')?>">Nuevo programa +</a></div>
+<div class="table-wrap"><table class="admin-table"><thead><tr><th>Programa</th><th>Línea</th><th>Estado</th><th>Acciones</th></tr></thead><tbody><?php foreach($items as $c):?><tr><td><strong><?=e($c['title'])?></strong><small><?=e($c['technology'])?> · <?=e(age_label($c))?></small></td><td><?=e(lines()[$c['line']])?></td><td><span class="status <?=e($c['status'])?>"><?=e(['published'=>'Publicado','draft'=>'Borrador','archived'=>'Archivado'][$c['status']])?></span></td><td><div class="table-actions"><a class="edit-link" href="<?=url('admin/edit.php?id='.$c['id'])?>">Editar</a><?php if($c['status']==='published'):?><a href="<?=e(course_link($c))?>">Ver</a><?php endif;?><form method="post"><?=csrf_field()?><input type="hidden" name="id" value="<?=$c['id']?>"><input type="hidden" name="status" value="<?=$c['status']==='published'?'draft':'published'?>"><button type="submit"><?=$c['status']==='published'?'Retirar':'Publicar'?></button></form></div></td></tr><?php endforeach;?><?php if(!$items):?><tr><td colspan="4">No hay programas con estos filtros.</td></tr><?php endif;?></tbody></table></div><?php admin_footer(); ?>
