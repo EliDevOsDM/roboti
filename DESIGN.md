@@ -1,6 +1,6 @@
 # Dirección visual de Roboti
 
-Identidad provisional derivada de los archivos recibidos: azul marino #102B49, burdeos #8D2044, blanco y grises suaves. El manual de marca y el logo principal definitivo siguen pendientes. La cabecera utiliza un identificador tipográfico provisional con un icono genérico; no pretende reemplazar el logo oficial.
+Por indicación del cliente del 17 de octubre de 2026, el burdeos #8D2044 del robot es el color principal. Se aplica a la marca, barra superior, botones, enlaces y sección EDGE; el pie utiliza burdeos profundo #51132C. Se combina con blanco, rosas suaves y texto oscuro neutro. La muestra del icono adjunto confirmó RGB 141, 32, 68. El manual de marca y el logo principal definitivo siguen pendientes. La cabecera utiliza un identificador tipográfico provisional con un icono genérico; no pretende reemplazar el logo oficial.
 
 Se tomó la estructura comercial de Saberi como referencia, con una composición, paleta y jerarquía propias. La oferta se divide por edad y línea; EDGE ocupa un apartado principal. Los datos comerciales no suministrados permanecen vacíos en la base.
 
