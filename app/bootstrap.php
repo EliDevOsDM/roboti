@@ -71,10 +71,45 @@ function age_label(array $c): string {
     if ($c['age_min'] === null) return $c['line'] === 'adultos' ? 'Jóvenes y adultos' : 'Consultar edad';
     return $c['age_max'] !== null ? $c['age_min'] . '–' . $c['age_max'] . ' años' : 'Desde ' . $c['age_min'] . ' años';
 }
-function image_url(array $c): string {
-    $name = (string)($c['image'] ?? 'robot-hero.webp');
-    if (!preg_match('/^[a-zA-Z0-9_-]+\.(webp|png|jpe?g)$/', $name) || !is_file(ROOT . '/public/assets/images/' . $name)) $name = 'robot-hero.webp';
-    return asset('images/' . $name);
+function default_course_image(array $c): string {
+    $topic = strtolower((string)($c['slug'] ?? '')) . ' ' . search_text(($c['title'] ?? '') . ' ' . ($c['technology'] ?? ''));
+    if (($c['line'] ?? '') === 'adultos') {
+        if (preg_match('/microsoldadura|reparacion|electronica/', $topic)) return 'foto-electronica-en-equipo.webp';
+        if (preg_match('/arduino|circuit|domotica|pcb/', $topic)) return 'foto-circuitos.webp';
+        return 'foto-formacion-robotica.webp';
+    }
+    if (($c['track'] ?? '') === 'explorer' || (isset($c['age_max']) && (int)$c['age_max'] <= 7)) {
+        return preg_match('/safari|espacio|planeta/', $topic) ? 'foto-explorer-espacio.webp' : 'foto-explorer-beebot.webp';
+    }
+    if (($c['track'] ?? '') === 'builders' || ($c['technology'] ?? '') === 'LEGO') return 'foto-taller-robotica.webp';
+    if (in_array($c['track'] ?? '', ['maker', 'engineering'], true) || preg_match('/arduino|electronica|domotica|circuit|pcb/', $topic)) return 'foto-circuitos.webp';
+    return 'foto-robotica-acompanada.webp';
+}
+function image_name(array $c): string {
+    $name = (string)($c['image'] ?? '');
+    // Actualiza los recursos iniciales en bases existentes y respeta imágenes personalizadas.
+    if (in_array($name, ['', 'robot-hero.webp', 'robot-builder.webp', 'electronics.webp'], true)) $name = default_course_image($c);
+    if (!preg_match('/^[a-zA-Z0-9_-]+\.(webp|png|jpe?g)$/', $name) || !is_file(ROOT . '/public/assets/images/' . $name)) $name = default_course_image($c);
+    return $name;
+}
+function image_url(array $c): string { return asset('images/' . image_name($c)); }
+function image_srcset(string $name): string {
+    if (!preg_match('/^foto-[a-z0-9-]+\.webp$/', $name)) return '';
+    $small = substr($name, 0, -5) . '-600.webp';
+    if (!is_file(ROOT . '/public/assets/images/' . $small)) return '';
+    return asset('images/' . $small) . ' 600w, ' . asset('images/' . $name) . ' 1200w';
+}
+function image_alt(array $c): string {
+    return match (image_name($c)) {
+        'foto-robotica-acompanada.webp' => 'Estudiante e instructor trabajando con un robot y una computadora en Roboti',
+        'foto-taller-robotica.webp' => 'Estudiantes de Roboti construyendo robots con piezas modulares',
+        'foto-electronica-en-equipo.webp' => 'Participantes de Roboti trabajando juntos en una placa electrónica',
+        'foto-explorer-espacio.webp' => 'Grupo infantil explorando un tablero espacial con un robot Bee-Bot',
+        'foto-circuitos.webp' => 'Práctica de electrónica con cables y pulsadores sobre una protoboard',
+        'foto-formacion-robotica.webp' => 'Participantes en una sesión de formación con un robot humanoide',
+        'foto-explorer-beebot.webp' => 'Actividad infantil con robots Bee-Bot, letras y bloques de colores',
+        default => 'Imagen del programa ' . ($c['title'] ?? 'de Roboti Academy'),
+    };
 }
 function course_link(array $c): string { return url('programa.php?slug=' . rawurlencode($c['slug'])); }
 function courses(array $filters = [], int $limit = 0, int $offset = 0): array {

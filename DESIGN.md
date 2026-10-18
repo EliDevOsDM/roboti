@@ -6,9 +6,17 @@ Se tomó la estructura comercial de Saberi como referencia, con una composición
 
 Los logos de Roboticlub y Open Games y el afiche son los originales del usuario, convertidos a WebP sin alterar su diseño. Las tres ilustraciones conceptuales se generaron con la herramienta integrada de imagegen. Son material ilustrativo, no fotografías de equipos o instalaciones reales.
 
-Archivos finales de las ilustraciones en public/assets/images: robot-hero.webp, robot-builder.webp y electronics.webp. El contenido original se conserva en database/courses.json; la presentación pública debe ser revisada por el propietario antes de abrir inscripciones.
+Las ilustraciones anteriores se conservan como recursos opcionales: robot-hero.webp, robot-builder.webp y electronics.webp. El contenido original se conserva en database/courses.json; la presentación pública debe ser revisada por el propietario antes de abrir inscripciones.
 
-## Prompts de las ilustraciones
+## Fotografías del propietario — 18 de octubre de 2026
+
+Las siete fotografías aportadas por el usuario sustituyen las ilustraciones en la portada, el catálogo y las fichas. Se distribuyen también en Nosotros y Método EDGE. Se usan como escenas de aprendizaje de la academia, sin afirmar que documenten cada proyecto específico del catálogo. Los logos y el afiche conservan su función original.
+
+Cada fotografía tiene versiones WebP de 1200 y 600 píxeles de ancho. La conversión mantiene el encuadre y los colores originales y descarta metadatos. El navegador selecciona la resolución mediante srcset; las imágenes secundarias cargan de forma diferida. Los encuadres de las tarjetas se ajustan con CSS para mantener visibles las personas y los materiales. La paleta principal continúa en #8D2044.
+
+El inventario inicial y el SQL incluyen las fotografías. La vista también adapta las tres imágenes iniciales en bases ya instaladas, sin sobrescribir imágenes personalizadas que haya elegido un administrador.
+
+## Prompts de las ilustraciones anteriores
 
 ### Imagen 1
 

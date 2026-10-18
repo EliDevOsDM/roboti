@@ -9,3 +9,33 @@
 .preview-note{padding:7px 20px;text-align:center;background:#f8eff2;color:#7d2744;font-size:11px;line-height:1.5;border-bottom:1px solid #eedee4}
 
 h1,h2,h3{color:var(--brand-deep)}.edge-section h2,.footer-cta h2{color:#fff}.edge-section :focus-visible,.footer-cta :focus-visible,.site-footer :focus-visible,.topbar :focus-visible{outline-color:#fff}
+
+/* Fotografías de las actividades de Roboti. */
+.hero-image-frame{aspect-ratio:4/5;border-radius:160px 160px 24px 24px;background:var(--brand-soft)}
+.hero-image-frame img{mix-blend-mode:normal;transform:none;object-position:50% 46%}
+.hero-visual{padding-bottom:40px}
+.label-bottom{bottom:45px}
+.photo-section{padding-top:0}
+.photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.learning-photo{margin:0;overflow:hidden;border:1px solid #eadfe3;border-radius:14px;background:#fff}
+.learning-photo>img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center}
+.learning-photo figcaption{padding:25px}
+.learning-photo .eyebrow{font-size:9px;margin-bottom:12px}
+.learning-photo h3{font-size:24px;line-height:1.2;margin-bottom:12px}
+.learning-photo p{font-size:14px;line-height:1.7;margin:0}
+.photo-pair{grid-template-columns:repeat(2,minmax(0,1fr))}
+.photo-pair .learning-photo>img{aspect-ratio:1.12;object-position:50% 45%}
+.method-photos{padding-top:0}
+.about-grid>img{aspect-ratio:4/5;object-fit:cover;object-position:center}
+.course-art.has-photo{aspect-ratio:1.4}
+.course-art.has-photo img{mix-blend-mode:normal;transform:none;object-position:50% 43%}
+.course-art.has-photo:hover img{transform:scale(1.04)}
+.course-art.has-photo .pill{background:#fffffff2;box-shadow:0 2px 10px #33132015}
+.course-art.has-photo .art-caption{background:#fffffff2;color:var(--brand-deep)}
+.course-art img[src*="foto-robotica-acompanada"]{object-position:50% 20%}
+.course-art img[src*="foto-electronica-en-equipo"]{object-position:50% 31%}
+.course-art img[src*="foto-explorer-espacio"]{object-position:50% 42%}
+.course-art img[src*="foto-formacion-robotica"]{object-position:50% 38%}
+.detail-image.has-photo img{aspect-ratio:4/5;mix-blend-mode:normal;object-position:center}
+@media(max-width:1000px){.hero-image-frame{max-height:none}.photo-grid{gap:18px}.learning-photo figcaption{padding:21px}.learning-photo h3{font-size:22px}}
+@media(max-width:700px){.hero-image-frame{aspect-ratio:4/5;border-radius:140px 140px 20px 20px}.photo-grid,.photo-pair{grid-template-columns:1fr;gap:25px}.learning-photo>img{aspect-ratio:4/5}.photo-pair .learning-photo>img{aspect-ratio:4/5}.learning-photo figcaption{padding:24px}.learning-photo h3{font-size:25px}.course-art.has-photo{aspect-ratio:1.4}.detail-image.has-photo{max-width:none}}

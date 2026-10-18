@@ -104,4 +104,4 @@ Revisado visualmente en navegador de escritorio y móvil. Los controles son sem�
 
 ## Recursos gráficos
 
-La dirección visual y los prompts completos están en `DESIGN.md`. Ilustraciones generadas con la herramienta integrada de imagegen, guardadas en `public/assets/images/robot-hero.webp`, `robot-builder.webp` y `electronics.webp`. Logos del club, torneo y afiche aportados por el usuario, con versiones WebP optimizadas. Las ilustraciones son conceptuales y se pueden sustituir por fotografías autorizadas desde el panel.
+La dirección visual está en `DESIGN.md`. Las siete fotografías aportadas por el propietario aparecen en portada, catálogo, fichas, Nosotros y Método EDGE, con versiones WebP de 600 y 1200 píxeles y carga adaptable. El catálogo inicial MySQL incluye estas fotos; las bases existentes que usan las tres ilustraciones iniciales reciben la nueva presentación sin alterar datos ni imágenes personalizadas. Logos del club, torneo y afiche también fueron aportados por el usuario. Las ilustraciones conceptuales anteriores permanecen como recursos opcionales en el panel.
