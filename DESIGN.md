@@ -1,20 +1,41 @@
-# Dirección visual de Roboti
+# Dirección visual de Roboti — 19 de octubre de 2026
 
-Por indicación del cliente del 17 de octubre de 2026, el burdeos #8D2044 del robot es el color principal. Se aplica a la marca, barra superior, botones, enlaces y sección EDGE; el pie utiliza burdeos profundo #51132C. Se combina con blanco, rosas suaves y texto oscuro neutro. La muestra del icono adjunto confirmó RGB 141, 32, 68. El manual de marca y el logo principal definitivo siguen pendientes. La cabecera utiliza un identificador tipográfico provisional con un icono genérico; no pretende reemplazar el logo oficial.
+## Concepto: un cuaderno de taller abierto
 
-Se tomó la estructura comercial de Saberi como referencia, con una composición, paleta y jerarquía propias. La oferta se divide por edad y línea; EDGE ocupa un apartado principal. Los datos comerciales no suministrados permanecen vacíos en la base.
+La interfaz usa una composición editorial inspirada en un taller: titulares amplios, fotografías de actividades, líneas de separación y etiquetas breves. La portada presenta «Aprender es hacer» sobre una franja de tres fotografías. Las rutas formativas aparecen como filas comparables y la metodología como un proceso. La navegación, el catálogo, las fichas y el pie fueron reconstruidos.
 
-Los logos de Roboticlub y Open Games y el afiche son los originales del usuario, convertidos a WebP sin alterar su diseño. Las tres ilustraciones conceptuales se generaron con la herramienta integrada de imagegen. Son material ilustrativo, no fotografías de equipos o instalaciones reales.
+## Sistema visual
 
-Las ilustraciones anteriores se conservan como recursos opcionales: robot-hero.webp, robot-builder.webp y electronics.webp. El contenido original se conserva en database/courses.json; la presentación pública debe ser revisada por el propietario antes de abrir inscripciones.
+- Burdeos principal **#8D2044**, conservado por petición del cliente.
+- Fondo marfil **#F3F2EB**, texto **#282B26**, líneas **#D4D6CB** y superficies claras **#FFFEFA**.
+- Acento lima **#DFE991** para el evento, letras EDGE y acciones sobre fondos oscuros.
+- Space Grotesk variable para titulares y DM Sans variable para lectura, con licencias SIL OFL incluidas y archivos WOFF2 alojados localmente. Etiquetas cortas en fuente monoespaciada de sistema.
+- Retícula de hasta 1280 px, separación base de 8 px, márgenes móviles de 18 px, secciones de 65–100 px.
+- Imágenes rectangulares y bordes rectos. Iconos lineales. Interacciones de color y zoom discreto, respetando movimiento reducido.
 
-## Fotografías del propietario — 18 de octubre de 2026
+## Composición y experiencia
 
-Las siete fotografías aportadas por el usuario sustituyen las ilustraciones en la portada, el catálogo y las fichas. Se distribuyen también en Nosotros y Método EDGE. Se usan como escenas de aprendizaje de la academia, sin afirmar que documenten cada proyecto específico del catálogo. Los logos y el afiche conservan su función original.
+- Portada: titular transversal, acción visible y franja de actividades; entrada a EDGE, Essentials y formación técnica; atajos por nivel; metodología; programas destacados; comunidad y evento.
+- Programas: filtros laterales en escritorio, formulario compacto en móvil, entradas con fotografía, edad, duración y tecnología. Conserva búsqueda, filtros, paginación y el catálogo dinámico.
+- Fichas: título de página, información del proyecto y panel de consulta con duración, inversión, horarios y requisitos.
+- EDGE: explicación de sus cuatro etapas, fotografías relacionadas con exploración y construcción y navegación por niveles.
+- Academia: misión, visión y fotografías de construcción, electrónica y formación tecnológica.
+- Roboticlub: identidad original, comunidad, entrenamiento, competencia y requisitos de participación.
+- Open Games: presentación como programa de evento, datos de participación y lista legible de las 11 categorías con sus reglamentos.
+- Contacto y privacidad: contenido existente con la nueva jerarquía visual.
+- Menú móvil: listado de navegación amplio, estado expandido accesible, cierre con Escape, control del foco y bloqueo del desplazamiento de fondo.
 
-Cada fotografía tiene versiones WebP de 1200 y 600 píxeles de ancho. La conversión mantiene el encuadre y los colores originales y descarta metadatos. El navegador selecciona la resolución mediante srcset; las imágenes secundarias cargan de forma diferida. Los encuadres de las tarjetas se ajustan con CSS para mantener visibles las personas y los materiales. La paleta principal continúa en #8D2044.
+## Fotografías y marca
 
-El inventario inicial y el SQL incluyen las fotografías. La vista también adapta las tres imágenes iniciales en bases ya instaladas, sin sobrescribir imágenes personalizadas que haya elegido un administrador.
+La asignación detallada de las siete fotos está en [ANALISIS-FOTOGRAFIAS.md](ANALISIS-FOTOGRAFIAS.md). Se distinguen iniciación con Bee-Bot, construcción guiada, electrónica y formación tecnológica. Se presentan como actividades de la academia, sin afirmar que documentan cada proyecto específico o una competición.
+
+Los logos de Roboticlub, Open Games y el afiche se mantienen como originales. La marca tipográfica de cabecera sigue siendo provisional a la espera del manual de marca y del logo principal definitivo. Las versiones WebP de 600 y 1200 píxeles conservan colores y composición originales; CSS controla su encuadre de presentación.
+
+## Implementación y publicación
+
+Se mantienen PHP, PDO y MySQL, el panel administrativo y el inventario de 77 programas. GitHub Pages recibe la exportación de vistas públicas, con filtros en JavaScript, archivos locales de fuentes y los 12 reglamentos. El aviso de vista previa se coloca al final de las páginas.
+
+El catálogo, las condiciones comerciales pendientes y las discrepancias documentales del torneo conservan su información. Los canales oficiales de contacto siguen configurándose en el entorno; no se inventan datos.
 
 ## Prompts de las ilustraciones anteriores
 

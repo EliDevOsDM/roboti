@@ -6,7 +6,7 @@ Para instalar desde phpMyAdmin, sigue `LEEME-PHPMYADMIN.md`. El archivo para imp
 
 ## GitHub Pages
 
-La versión pública de presentación se publica automáticamente con `.github/workflows/pages.yml` al actualizar `main`. El workflow prueba PHP y exporta únicamente HTML, CSS, JavaScript, las ilustraciones y los reglamentos. El catálogo de Pages permite buscar y filtrar en el navegador; las 77 fichas tienen sus propias URL. La versión PHP conserva la administración y consulta dinámica de MySQL para un hosting que ejecute PHP.
+La versión pública de presentación se publica automáticamente con `.github/workflows/pages.yml` al actualizar `main`. El workflow prueba PHP y exporta únicamente HTML, CSS, JavaScript, fuentes, imágenes y reglamentos. El catálogo de Pages permite buscar y filtrar en el navegador; las 77 fichas tienen sus propias URL. La versión PHP conserva la administración y consulta dinámica de MySQL para un hosting que ejecute PHP.
 
 GitHub Pages no ejecuta PHP ni conecta con MySQL. Su catálogo es una instantánea de `database/courses.json`, regenerada en cada despliegue. Los cambios del panel en un hosting PHP no se sincronizan automáticamente con ese archivo. No se publican el panel, credenciales, SQL ni bases de ejecución dentro del artefacto de Pages; el código fuente y el SQL sí están en el repositorio como parte del proyecto solicitado.
 
@@ -55,7 +55,7 @@ Como alternativa a la inicialización de la base por consola, importa `database/
 
 Si el hosting fija `public_html` como raíz, coloca el contenido de `public/` en esa carpeta y las carpetas privadas junto a ella, conservando la relación entre rutas: `dirname(__DIR__)` de cada página debe apuntar a la carpeta que contiene `app/`. Nunca subas el proyecto entero a una carpeta navegable. No cambies el stack a un exportado HTML: PHP debe ejecutarse en el servidor para consultar y administrar cursos.
 
-El alojamiento Sites basado en Workers no ejecuta PHP de forma nativa. Esta entrega es el proyecto PHP local; la publicación necesita un alojamiento compatible. No se ha desplegado externamente ni probado una conexión MySQL real en este equipo; se ha verificado el flujo completo con SQLite.
+La vista pública está desplegada en https://elidevosdm.github.io/roboti/. La aplicación PHP con administración y MySQL necesita un alojamiento compatible. No se ha desplegado ese backend ni probado una conexión MySQL real en este equipo; se ha verificado el flujo completo con SQLite.
 
 ## Contacto
 
@@ -105,3 +105,10 @@ Revisado visualmente en navegador de escritorio y móvil. Los controles son sem�
 ## Recursos gráficos
 
 La dirección visual está en `DESIGN.md`. Las siete fotografías aportadas por el propietario aparecen en portada, catálogo, fichas, Nosotros y Método EDGE, con versiones WebP de 600 y 1200 píxeles y carga adaptable. El catálogo inicial MySQL incluye estas fotos; las bases existentes que usan las tres ilustraciones iniciales reciben la nueva presentación sin alterar datos ni imágenes personalizadas. Logos del club, torneo y afiche también fueron aportados por el usuario. Las ilustraciones conceptuales anteriores permanecen como recursos opcionales en el panel.
+
+
+## Rediseño editorial — 19 de octubre de 2026
+
+La interfaz pública se reconstruyó con una portada fotográfica, navegación nueva, rutas formativas comparables, catálogo con filtros laterales y páginas interiores diferenciadas. Se conserva el burdeos de marca. Space Grotesk y DM Sans se sirven localmente desde `public/assets/fonts` con sus licencias OFL.
+
+Consulta `DESIGN.md` para la dirección visual y `ANALISIS-FOTOGRAFIAS.md` para la clasificación de las siete imágenes. El menú móvil incluye cierre con Escape y gestión del foco. Las funciones PHP/MySQL y la exportación de GitHub Pages siguen utilizando el mismo inventario.

@@ -38,7 +38,7 @@ with tempfile.TemporaryDirectory(prefix='roboti-pages-') as directory:
         script=f'<script src="{base}/assets/js/pages-preview.js" defer></script>'
         body=body.replace('</head>',script+'</head>')
         notice='<aside class="preview-note" aria-label="Vista previa">Vista previa de Roboti Academy · Consulta disponibilidad antes de inscribirte.</aside>'
-        body=body.replace('<body>','<body>'+notice)
+        body=body.replace('</body>',notice+'</body>')
         destination=output/name
         destination.parent.mkdir(parents=True,exist_ok=True)
         destination.write_text(body,encoding='utf-8')
@@ -47,7 +47,7 @@ with tempfile.TemporaryDirectory(prefix='roboti-pages-') as directory:
     for c in records:
         save('programa.php','programas/'+c['slug']+'.html','slug='+c['slug'])
     (output/'assets').mkdir(exist_ok=True)
-    for name in ['css','js']:
+    for name in ['css','js','fonts']:
         shutil.copytree(root/'public/assets'/name,output/'assets'/name)
     (output/'assets/images').mkdir()
     for image in (root/'public/assets/images').iterdir():

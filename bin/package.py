@@ -9,7 +9,7 @@ with ZipFile(target,'w',ZIP_DEFLATED) as z:
         for p in sorted((root/directory).rglob('*')):
             if p.is_file() and '__pycache__' not in p.parts:
                 z.write(p,p.relative_to(root).as_posix())
-    for name in ['README.md','LEEME-PHPMYADMIN.md','DESIGN.md','BRIEF-WEB-ROBOTI.md','VERIFICACION.md','.env.example','.gitignore','storage/.gitkeep','storage/.htaccess']:
+    for name in ['README.md','LEEME-PHPMYADMIN.md','DESIGN.md','ANALISIS-FOTOGRAFIAS.md','BRIEF-WEB-ROBOTI.md','VERIFICACION.md','.env.example','.gitignore','storage/.gitkeep','storage/.htaccess']:
         z.write(root/name,name)
 with ZipFile(target) as z:
     assert 'public/index.php' in z.namelist()
