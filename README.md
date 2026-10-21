@@ -109,6 +109,6 @@ La dirección visual está en `DESIGN.md`. Las siete fotografías aportadas por 
 
 ## Rediseño editorial — 19 de octubre de 2026
 
-La interfaz pública se reconstruyó con una portada fotográfica, navegación nueva, rutas formativas comparables, catálogo con filtros laterales y páginas interiores diferenciadas. Se conserva el burdeos de marca. Space Grotesk y DM Sans se sirven localmente desde `public/assets/fonts` con sus licencias OFL.
+La interfaz pública se reconstruyó con una portada fotográfica, navegación nueva, rutas formativas comparables, catálogo con filtros laterales y páginas interiores diferenciadas. La actualización del 20 de octubre aplica como primario el azul #092950 extraído del logo de Open Games. Space Grotesk y DM Sans se sirven localmente desde `public/assets/fonts` con sus licencias OFL.
 
 Consulta `DESIGN.md` para la dirección visual y `ANALISIS-FOTOGRAFIAS.md` para la clasificación de las siete imágenes. El menú móvil incluye cierre con Escape y gestión del foco. Las funciones PHP/MySQL y la exportación de GitHub Pages siguen utilizando el mismo inventario.

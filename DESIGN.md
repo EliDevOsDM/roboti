@@ -1,4 +1,4 @@
-# Dirección visual de Roboti — 19 de octubre de 2026
+# Dirección visual de Roboti — 20 de octubre de 2026
 
 ## Concepto: un cuaderno de taller abierto
 
@@ -6,7 +6,7 @@ La interfaz usa una composición editorial inspirada en un taller: titulares amp
 
 ## Sistema visual
 
-- Burdeos principal **#8D2044**, conservado por petición del cliente.
+- Azul principal **#092950** (RGB 9, 41, 80), extraído de la palabra «ROBOTI» en el logo original de Open Games, por petición del cliente. Es el píxel azul más frecuente en esa zona del PNG; el archivo raster presenta pequeñas variaciones de tono. Hover **#061D39**, fondo profundo **#061B34** y superficie suave **#E7EDF4**. Botones, enlaces, titulares, iconos, panel administrativo y favicon comparten esta paleta.
 - Fondo marfil **#F3F2EB**, texto **#282B26**, líneas **#D4D6CB** y superficies claras **#FFFEFA**.
 - Acento lima **#DFE991** para el evento, letras EDGE y acciones sobre fondos oscuros.
 - Space Grotesk variable para titulares y DM Sans variable para lectura, con licencias SIL OFL incluidas y archivos WOFF2 alojados localmente. Etiquetas cortas en fuente monoespaciada de sistema.

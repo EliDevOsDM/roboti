@@ -32,11 +32,11 @@ function page_header(string $title='',string $active='inicio',string $descriptio
     $nav=['programas'=>['programas.php','Programas'],'edge'=>['metodologia.php','El método'],'club'=>['club.php','Roboticlub'],'games'=>['open-games.php','Open Games'],'nosotros'=>['nosotros.php','La academia']];
 ?>
 <!doctype html><html lang="es"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="<?=e($description)?>"><meta name="theme-color" content="#8d2044">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="<?=e($description)?>"><meta name="theme-color" content="#092950">
 <title><?=e($title ? $title.' · Roboti Academy':'Roboti Academy · Aprender es hacer')?></title>
-<link rel="icon" href="<?=asset('images/favicon.svg')?>" type="image/svg+xml">
+<link rel="icon" href="<?=asset('images/favicon.svg?v=20261020-blue')?>" type="image/svg+xml">
 <link rel="preload" href="<?=asset('fonts/space-grotesk.woff2')?>" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="<?=asset('css/site.css?v=20261019-2')?>"><script src="<?=asset('js/site.js?v=20261019-2')?>" defer></script>
+<link rel="stylesheet" href="<?=asset('css/site.css?v=20261020-blue')?>"><script src="<?=asset('js/site.js?v=20261020-blue')?>" defer></script>
 </head><body class="page-<?=e($active)?>"><a class="skip-link" href="#contenido">Saltar al contenido</a>
 <header class="site-header"><div class="wrap header-inner">
 <a class="brand" href="<?=url('index.php')?>" aria-label="Roboti Academy, inicio"><?php brand();?></a>
