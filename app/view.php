@@ -36,7 +36,7 @@ function page_header(string $title='',string $active='inicio',string $descriptio
 <title><?=e($title ? $title.' · Roboti Academy':'Roboti Academy · Aprender es hacer')?></title>
 <link rel="icon" href="<?=asset('images/favicon.svg?v=20261020-blue')?>" type="image/svg+xml">
 <link rel="preload" href="<?=asset('fonts/space-grotesk.woff2')?>" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="<?=asset('css/site.css?v=20261020-blue')?>"><script src="<?=asset('js/site.js?v=20261020-blue')?>" defer></script>
+<link rel="stylesheet" href="<?=asset('css/site.css?v=20261020-footer')?>"><script src="<?=asset('js/site.js?v=20261020-blue')?>" defer></script>
 </head><body class="page-<?=e($active)?>"><a class="skip-link" href="#contenido">Saltar al contenido</a>
 <header class="site-header"><div class="wrap header-inner">
 <a class="brand" href="<?=url('index.php')?>" aria-label="Roboti Academy, inicio"><?php brand();?></a>
@@ -48,7 +48,6 @@ function page_footer():void { ?>
 </main><footer class="site-footer"><div class="wrap">
 <div class="footer-top"><span class="eyebrow">EL PRÓXIMO PASO</span><h2>Hagamos espacio<br>para tus ideas.</h2><a class="button light" href="<?=url('programas.php')?>">Encuentra tu programa <?=icon('arrow-up')?></a></div>
 <div class="footer-links"><p>Una academia para explorar,<br>construir y seguir aprendiendo.<br><span>Guayaquil, Ecuador</span></p><nav aria-label="Explorar Roboti"><a href="<?=url('programas.php')?>">Programas</a><a href="<?=url('metodologia.php')?>">Método EDGE</a><a href="<?=url('nosotros.php')?>">La academia</a></nav><nav aria-label="Comunidad y contacto"><a href="<?=url('club.php')?>">Roboticlub</a><a href="<?=url('open-games.php')?>">Open Games 2026</a><a href="<?=url('contacto.php')?>">Contacto <?=icon('arrow-up')?></a></nav></div>
-<div class="footer-word" aria-hidden="true">roboti<span>.</span></div>
 <div class="footer-bottom"><span>© <?=date('Y')?> ROBOTI ACADEMY</span><span>APRENDER ES HACER.</span><a href="<?=url('privacidad.php')?>">Privacidad</a></div>
 </div></footer></body></html>
 <?php }
