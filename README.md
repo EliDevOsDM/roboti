@@ -76,7 +76,7 @@ El propietario debe confirmar si las 56 propuestas EDGE son cursos independiente
 
 Open Games incluye la fecha de inicio publicada (28 de noviembre de 2026, 08:00), 11 categorías y los 12 reglamentos originales. No anuncia un cierre definitivo porque el afiche y el cronograma discrepan. Se señalan las dudas sobre Minisumo y Drones. El enlace de inscripción oficial no fue suministrado. El detalle de discrepancias está en `BRIEF-WEB-ROBOTI.md`.
 
-Para una nueva edición, actualiza `app/event.php`, `public/open-games.php`, la franja de `app/view.php` y el resumen en `public/index.php`. El catálogo de cursos es dinámico; la información institucional y del evento se mantiene en archivos PHP.
+Para una nueva edición, actualiza `app/event.php`, `public/open-games.php`, los enlaces de `app/view.php` y el resumen en `public/index.php`. El catálogo de cursos es dinámico; la información institucional y del evento se mantiene en archivos PHP.
 
 ## Estructura
 
@@ -107,8 +107,8 @@ Revisado visualmente en navegador de escritorio y móvil. Los controles son sem�
 La dirección visual está en `DESIGN.md`. Las siete fotografías aportadas por el propietario aparecen en portada, catálogo, fichas, Nosotros y Método EDGE, con versiones WebP de 600 y 1200 píxeles y carga adaptable. El catálogo inicial MySQL incluye estas fotos; las bases existentes que usan las tres ilustraciones iniciales reciben la nueva presentación sin alterar datos ni imágenes personalizadas. Logos del club, torneo y afiche también fueron aportados por el usuario. Las ilustraciones conceptuales anteriores permanecen como recursos opcionales en el panel.
 
 
-## Rediseño editorial — 19 de octubre de 2026
+## Rediseño visual — 24 de octubre de 2026
 
-La interfaz pública se reconstruyó con una portada fotográfica, navegación nueva, rutas formativas comparables, catálogo con filtros laterales y páginas interiores diferenciadas. La actualización del 20 de octubre aplica como primario el azul #092950 extraído del logo de Open Games. Space Grotesk y DM Sans se sirven localmente desde `public/assets/fonts` con sus licencias OFL.
+La interfaz adopta la nueva referencia Rising Sun: portada con fotografía de ancho completo, navegación transparente que cambia a blanco al desplazar, secciones blancas y azul suave, tarjetas redondeadas y preguntas frecuentes. El azul principal sigue siendo #092950, extraído del logo. Se retira el lima y se mantiene un pie compacto. DM Sans se sirve localmente con su licencia OFL.
 
-Consulta `DESIGN.md` para la dirección visual y `ANALISIS-FOTOGRAFIAS.md` para la clasificación de las siete imágenes. El menú móvil incluye cierre con Escape y gestión del foco. Las funciones PHP/MySQL y la exportación de GitHub Pages siguen utilizando el mismo inventario.
+El catálogo utiliza filtros superiores y conserva sus funciones. Las fichas, la academia, EDGE, Roboticlub, Open Games y contacto comparten la nueva dirección visual. Consulta `DESIGN.md` y `ANALISIS-FOTOGRAFIAS.md` para el criterio de composición y la clasificación de imágenes. PHP/MySQL y GitHub Pages mantienen sus modos de funcionamiento anteriores.

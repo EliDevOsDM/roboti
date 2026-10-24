@@ -4,13 +4,13 @@ La clasificación se basa en la actividad y los materiales visibles. Las fotogra
 
 | Foto recibida | Contenido visible | Sección adecuada | Uso implementado |
 | --- | --- | --- | --- |
-| 1 | Estudiante con computadora y robot modular; una persona guía la actividad. | Robótica guiada, construcción y programación, metodología. | Sección «La respuesta se construye» y etapa de desarrollo de EDGE. |
-| 2 | Grupo de estudiantes con robots modulares, piezas y bandejas de construcción. | Taller de robótica y vida en la academia. | Portada, presentación de la academia y catálogo de construcción. |
+| 1 | Estudiante con computadora y robot modular; una persona guía la actividad. | Robótica guiada, construcción y programación, metodología. | Presentación «La curiosidad es el punto de partida» y etapa de desarrollo de EDGE. |
+| 2 | Grupo de estudiantes con robots modulares, piezas y bandejas de construcción. | Taller de robótica y vida en la academia. | Portada a ancho completo, tarjeta EDGE, presentación de la academia y catálogo de construcción. |
 | 3 | Dos participantes trabajando sobre una placa electrónica en una mesa técnica. | Electrónica, mantenimiento y aprendizaje técnico colaborativo. | Área de electrónica en «La academia» y programas técnicos. No se presenta como evidencia de microsoldadura realizada. |
-| 4 | Grupo infantil con un robot tipo Bee-Bot en un tablero espacial. | Iniciación a secuencias, orientación, juego y colaboración. | Etapa «Explorar» de EDGE. La asignación es temática; no confirma que la foto corresponda a un módulo concreto. |
-| 5 | Montaje de cables, pulsadores y componentes sobre una protoboard. | Electrónica práctica y prototipado. | Franja de portada «Experimentar» y programas de electrónica/circuitos. No se identifica una plataforma de control que no se vea en la foto. |
+| 4 | Grupo infantil con un robot tipo Bee-Bot en un tablero espacial. | Iniciación a secuencias, orientación, juego y colaboración. | Metodología en la portada y etapa «Explorar» de EDGE. La asignación es temática; no confirma que la foto corresponda a un módulo concreto. |
+| 5 | Montaje de cables, pulsadores y componentes sobre una protoboard. | Electrónica práctica y prototipado. | Bloque «Ideas que se conectan» y programas de electrónica/circuitos. No se identifica una plataforma de control que no se vea en la foto. |
 | 6 | Sesión de formación alrededor de un robot humanoide y componentes electrónicos. | Formación tecnológica y aprendizaje continuo. | «La academia», bloque de formación y programas técnicos generales. |
-| 7 | Actividad infantil con robots tipo Bee-Bot, letras y bloques de colores. | Iniciación tecnológica, juego y primeros descubrimientos. | Franja «Descubrir» de la portada y programas infantiles. |
+| 7 | Actividad infantil con robots tipo Bee-Bot, letras y bloques de colores. | Iniciación tecnológica, juego y primeros descubrimientos. | Tarjeta de iniciación Essentials y programas infantiles. |
 
 Los logotipos originales se reservan para Roboticlub y Open Games. Ninguna de las siete fotografías se describe como una competición, premiación o evento Open Games.
 
