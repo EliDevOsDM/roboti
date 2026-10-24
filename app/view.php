@@ -23,39 +23,44 @@ function icon(string $name, string $class=''): string {
     return '<svg class="icon '.e($class).'" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'.($paths[$name]??$paths['spark']).'</svg>';
 }
 function brand():void { ?>
-<span class="brand-symbol"><?=icon('robot','brand-mark')?></span><span class="brand-word">roboti<span class="brand-dot">.</span><small>ACADEMY</small></span>
+<span class="brand-symbol"><?=icon('robot','brand-mark')?></span><span class="brand-word">Roboti<small>ACADEMY</small></span>
 <?php }
 function photo(string $name,string $alt,string $sizes='(max-width: 760px) 100vw, 50vw',bool $priority=false):void { ?>
 <img src="<?=asset('images/'.$name)?>" srcset="<?=e(image_srcset($name))?>" sizes="<?=e($sizes)?>" alt="<?=e($alt)?>" width="1200" height="1600" decoding="async" <?= $priority?'fetchpriority="high"':'loading="lazy"'?>>
 <?php }
 function page_header(string $title='',string $active='inicio',string $description='Robótica, creatividad y aprendizaje práctico para niños, jóvenes y adultos. Descubre Roboti Academy y la metodología EDGE.'):void {
-    $nav=['programas'=>['programas.php','Programas'],'edge'=>['metodologia.php','El método'],'club'=>['club.php','Roboticlub'],'games'=>['open-games.php','Open Games'],'nosotros'=>['nosotros.php','La academia']];
+    $nav=['programas'=>['programas.php','Programas'],'edge'=>['metodologia.php','Método EDGE'],'club'=>['club.php','Roboticlub'],'games'=>['open-games.php','Open Games'],'nosotros'=>['nosotros.php','La academia']];
 ?>
 <!doctype html><html lang="es"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="<?=e($description)?>"><meta name="theme-color" content="#092950">
 <title><?=e($title ? $title.' · Roboti Academy':'Roboti Academy · Aprender es hacer')?></title>
 <link rel="icon" href="<?=asset('images/favicon.svg?v=20261020-blue')?>" type="image/svg+xml">
-<link rel="preload" href="<?=asset('fonts/space-grotesk.woff2')?>" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="<?=asset('css/site.css?v=20261020-footer')?>"><script src="<?=asset('js/site.js?v=20261020-blue')?>" defer></script>
+<link rel="preload" href="<?=asset('fonts/dm-sans.woff2')?>" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="<?=asset('css/site.css?v=20261024-rising')?>"><script src="<?=asset('js/site.js?v=20261024-rising')?>" defer></script>
 </head><body class="page-<?=e($active)?>"><a class="skip-link" href="#contenido">Saltar al contenido</a>
-<header class="site-header"><div class="wrap header-inner">
+<header class="site-header<?= $active==='inicio'?' header-home':''?>"><div class="wrap header-inner">
 <a class="brand" href="<?=url('index.php')?>" aria-label="Roboti Academy, inicio"><?php brand();?></a>
 <button class="menu-button" type="button" aria-label="Abrir menú" aria-controls="main-nav" aria-expanded="false"><span>Menú</span><?=icon('menu')?></button>
-<nav id="main-nav" aria-label="Navegación principal"><?php foreach($nav as $key=>[$path,$label]):?><a href="<?=url($path)?>" <?=$key===$active?'aria-current="page"':''?>><?=e($label)?></a><?php endforeach;?><a class="nav-cta" href="<?=url('contacto.php')?>">Hablemos <?=icon('arrow-up')?></a><span class="mobile-nav-note">ROBÓTICA · TECNOLOGÍA · INNOVACIÓN<br>Guayaquil, Ecuador</span></nav>
+<nav id="main-nav" aria-label="Navegación principal"><?php foreach($nav as $key=>[$path,$label]):?><a href="<?=url($path)?>" <?=$key===$active?'aria-current="page"':''?>><?=e($label)?></a><?php endforeach;?><a class="nav-cta" href="<?=url('contacto.php')?>">Contáctanos <?=icon('arrow-up')?></a><span class="mobile-nav-note">ROBÓTICA · TECNOLOGÍA · INNOVACIÓN<br>Guayaquil, Ecuador</span></nav>
 </div></header><main id="contenido">
 <?php }
 function page_footer():void { ?>
-</main><footer class="site-footer"><div class="wrap">
-<div class="footer-top"><span class="eyebrow">EL PRÓXIMO PASO</span><h2>Hagamos espacio<br>para tus ideas.</h2><a class="button light" href="<?=url('programas.php')?>">Encuentra tu programa <?=icon('arrow-up')?></a></div>
-<div class="footer-links"><p>Una academia para explorar,<br>construir y seguir aprendiendo.<br><span>Guayaquil, Ecuador</span></p><nav aria-label="Explorar Roboti"><a href="<?=url('programas.php')?>">Programas</a><a href="<?=url('metodologia.php')?>">Método EDGE</a><a href="<?=url('nosotros.php')?>">La academia</a></nav><nav aria-label="Comunidad y contacto"><a href="<?=url('club.php')?>">Roboticlub</a><a href="<?=url('open-games.php')?>">Open Games 2026</a><a href="<?=url('contacto.php')?>">Contacto <?=icon('arrow-up')?></a></nav></div>
-<div class="footer-bottom"><span>© <?=date('Y')?> ROBOTI ACADEMY</span><span>APRENDER ES HACER.</span><a href="<?=url('privacidad.php')?>">Privacidad</a></div>
-</div></footer></body></html>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about"><a class="brand" href="<?=url('index.php')?>" aria-label="Roboti Academy, inicio"><?php brand();?></a><p>Robótica, creatividad y tecnología.<br>Un espacio para aprender haciendo.</p><span class="footer-location"><?=icon('pin')?> Guayaquil, Ecuador</span></div>
+    <nav aria-label="Programas y aprendizaje"><h2>Aprende con nosotros</h2><a href="<?=url('programas.php?line=edge')?>">Programas EDGE</a><a href="<?=url('programas.php?line=essentials')?>">Essentials</a><a href="<?=url('programas.php?line=adultos')?>">Formación técnica</a><a href="<?=url('metodologia.php')?>">Nuestra metodología</a></nav>
+    <nav aria-label="Conoce Roboti"><h2>Somos Roboti</h2><a href="<?=url('nosotros.php')?>">La academia</a><a href="<?=url('club.php')?>">Roboticlub</a><a href="<?=url('open-games.php')?>">Open Games 2026</a><a href="<?=url('privacidad.php')?>">Privacidad</a></nav>
+    <div class="footer-contact"><h2>Empecemos a crear</h2><p>Encuentra el programa para tu edad y tus intereses.</p><a class="button light small" href="<?=url('contacto.php')?>">Consultar programas <?=icon('arrow')?></a></div>
+  </div>
+  <div class="wrap footer-bottom"><span>© <?=date('Y')?> Roboti Academy</span><span>Robótica · Tecnología · Innovación</span></div>
+</footer></body></html>
 <?php }
 function course_card(array $c):void {
     $srcset=image_srcset(image_name($c));
 ?>
 <article class="course-card">
-<a class="course-art" href="<?=e(course_link($c))?>" tabindex="-1" aria-hidden="true"><img src="<?=e(image_url($c))?>"<?php if($srcset):?> srcset="<?=e($srcset)?>" sizes="(max-width: 580px) 96px, 160px"<?php endif;?> alt="" loading="lazy" decoding="async" width="1200" height="1600"></a>
+<a class="course-art" href="<?=e(course_link($c))?>" tabindex="-1" aria-hidden="true"><img src="<?=e(image_url($c))?>"<?php if($srcset):?> srcset="<?=e($srcset)?>" sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 400px"<?php endif;?> alt="" loading="lazy" decoding="async" width="1200" height="1600"></a>
 <div class="course-body"><span class="course-kicker"><?=e(lines()[$c['line']])?><?= $c['track']?' / '.e(tracks()[$c['track']]):''?></span><h3><a href="<?=e(course_link($c))?>"><?=e($c['title'])?></a></h3><p><?=e($c['description'])?></p><div class="course-meta"><span><?=e(age_label($c))?></span><span><?=e($c['duration_months'])?> <?= (int)$c['duration_months']===1?'mes':'meses'?></span><span><?=e($c['technology'])?></span></div><div class="course-bottom"><small><?= $c['price']!==null?'$'.number_format((float)$c['price'],2).' '.e($c['price_period']):'Consultar inversión'?></small><a href="<?=e(course_link($c))?>" aria-label="Ver <?=e($c['title'])?>">Ver programa <?=icon('arrow-up')?></a></div></div>
 </article>
 <?php }

@@ -1,4 +1,15 @@
-# Verificación del rediseño
+# Verificación del rediseño — 24 de octubre de 2026
+
+Las 131 comprobaciones de `tests/integration.py` pasan con una base temporal. La exportación valida 77 fichas, 12 reglamentos y 3555 enlaces y recursos locales, sin publicar archivos privados.
+
+Revisión visual de la portada y secciones en escritorio, móvil de 390 px y tablet de 768 px. Comprobaciones de anchura de las ocho páginas públicas a 320 px: sin desbordamiento horizontal. Se ajustan el encuadre de las fotos y la distribución de las tarjetas en tablet.
+
+Se verificaron el encabezado blanco al desplazar, apertura y cierre del menú móvil, Escape con retorno del foco, el acordeón nativo de preguntas frecuentes y la búsqueda de «Safari». El catálogo devuelve la ficha Explorer Safari Bot y su enlace de consulta conserva el nombre seleccionado. Las imágenes observadas cargan correctamente.
+
+El backend PHP/MySQL y el panel administrativo conservan su implementación. No se ha probado una conexión MySQL real en este equipo. Los canales oficiales de contacto siguen pendientes y la web lo indica.
+
+## Registro del rediseño anterior
+
 
 Fecha: 19 de octubre de 2026.
 
